@@ -27,14 +27,11 @@ const getActualSleepHours = () =>
   getSleepHours("Saturday") +
   getSleepHours("Sunday");
 
-  const getIdealSleepHours = () => {
-    const idealHours = 8;
-    return idealHours * 7;
-  }
+  const getIdealSleepHours = idealHours => idealHours * 7;
 
   const calculateSleepDebt = () => {
     const actualSleepHours = getActualSleepHours();
-    const idealSleepHours = getIdealSleepHours();
+    const idealSleepHours = getIdealSleepHours(8);
     if (actualSleepHours === idealSleepHours) {
       return "You got the perfect amount of sleep";
     } else if (actualSleepHours > idealSleepHours) {
