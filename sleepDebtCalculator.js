@@ -35,8 +35,10 @@ const getActualSleepHours = () =>
     if (actualSleepHours === idealSleepHours) {
       return "You got the perfect amount of sleep";
     } else if (actualSleepHours > idealSleepHours) {
-      return 'You got ' + (actualSleepHours - idealSleepHours) + ' more hour(s) of sleep than you needed this week.';
+      return `You got ${(actualSleepHours - idealSleepHours)} more hour(s) of sleep than you needed this week.`;
     } else if (actualSleepHours < idealSleepHours) {
-      return 'You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) less sleep than you needed this week. Get some rest.';
+      return `You got ${(idealSleepHours - actualSleepHours)} hour(s) less sleep than you needed this week. Get some rest.`;
     }
   };
+  
+  console.log(calculateSleepDebt());
